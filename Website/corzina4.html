@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+<head>
+  <title>Корзина</title>
+   <style>
+     body {
+      font-family: Verdana , sans-serif;
+    }
+       .container {
+      width: 100%; 
+      max-width: 50000px; /* Максимальная ширина контейнера */
+      margin: 0 auto; /* Центрирование контейнера */
+      padding: 0 20px; /* Внутренние отступы по бокам */
+    }
+      .header {
+         background-color: gray;
+          padding: 20px;
+      }
+      .header img {
+  width: 180px;
+  height: 50px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+   </style>
+      <script>
+        function изменитьКоличество() {
+          let количество = document.getElementById('количество').value;
+          let стоимость = 1000; //  стоимость одной единицы товара
+          document.getElementById('общаяСтоимость').innerText = 'Общая стоимость: ' + (количество * стоимость) + ' руб.';
+        }
+      </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logotin.png">
+            <a href="index.html" target="bottom_right_frame" style="color: white; font-size: 40px; margin-left: 300px;">Главная страница</a>
+           </div>
+  <h2 style="font-size: 50px;"><center>Корзина</center></h2>
+  <img id="myImage" src="pr1.png">
+  <h2 id="hello">Игровая приставка X96 Max</h2>
+  <h2 id="goodbye">5000 руб.</h2>
+
+  </button>
+  <div class="col col-auto"><button type="button" data-quantity-change="1" class="button button--counter button--icon button--large"></div>
+</div>
+<input  style="color: black; font-size: 40px;" type="number" id="количество" min="1" value="1" oninput="изменитьКоличество()">
+<p  style="color: black; font-size: 40px;" id="общаяСтоимость">Общая стоимость: 1000 руб.</p>
+  
+  <label style="color: black;font-size: 40px;">Промокод или купон на скидку:</label>
+  <input style="color: black;font-size: 40px;"type="text" name="cart[coupon]" value="" class="input input--block"></div>     
+   <center><a href="zakaz.html" target="bottom_right_frame" style="color: black; font-size: 40px; ">Оформить заказ</a></center>
+   <button style="color: black; font-size: 40px; " onclick="clearContent()">Очистить корзину</button>
+   <script>
+    function clearContent() {
+        var helloText = document.getElementById('hello');
+        var goodbyeText = document.getElementById('goodbye');
+        var image = document.getElementById('myImage');
+        helloText.remove();
+        goodbyeText.remove();
+        image.remove();
+    }
+</script>
+<footer style="background-color: gray;">
+  <center><img  src="5.png"></center> 
+  <center><a href="7.html" target="bottom_right_frame" style="color: white; font-size: 30px; "> Обратная связь </a></center>
+</footer>
+</div>
+</body>
+</html>

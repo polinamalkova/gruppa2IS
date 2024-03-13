@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+<head>
+    <title>Каталог</title>
+   <style>
+       body {
+      font-family: Verdana , sans-serif;
+    }
+              .container {
+      width: 100%; /* Задайте ширину по вашему усмотрению */
+      max-width: 50000px; /* Максимальная ширина контейнера */
+      margin: 0 auto; /* Центрирование контейнера */
+      padding: 0 20px; /* Внутренние отступы по бокам */
+    }
+      .header {
+         background-color: gray;
+          padding: 20px;
+      }
+      .header img {
+  width: 180px;
+  height: 50px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+   </style>
+</head>
+<body>
+    <div class="container">
+    <div class="header">
+        <img src="logotin.png">
+        <a href="index.html" target="bottom_right_frame" style="color: white; font-size: 40px; margin-left: 300px;">Главная страница</a>
+       </div>
+       <script>
+        function фильтроватьПоКатегории(категория) {
+            // Получить все карточки товаров
+            let карточки = document.querySelectorAll('.карточка-товара');
+            
+            // Показать или скрыть карточки в зависимости от выбранной категории
+            карточки.forEach(карточка => {
+                if (категория === 'all' || карточка.dataset.категория === категория) {
+                    карточка.style.display = 'block';
+                } else {
+                    карточка.style.display = 'none';
+                }
+            });
+        }
+    </script>
+     
+</head>
+<body>
+    <div class="filter">
+        <label style="color: black; font-size: 40px; "for="category">Фильтр по категории:</label>
+        <select style="color: black; font-size: 40px; " id="category" onchange="фильтроватьПоКатегории(this.value)">
+            <option style="color: black; font-size: 40px; " value="all">Все категории</option>
+            <option style="color: black; font-size: 40px; " value="electronics">Приставки</option>
+            <option style="color: black; font-size: 40px; " value="games">Игры</option>
+            <option style="color: black; font-size: 40px; " value="accessories">Аксессуары</option>
+        </select>
+    </div>
+
+    <div id="products">
+        <div class="карточка-товара" data-категория="accessories">
+                <img src="ac1.png" alt="Товар 1">
+                <h2 style="color: black; font-size: 40px; " >TRUE GAMERS Кепка снепбек с прямым козырьком с рисунком (черный)</h2>
+                <p style="color: black; font-size: 40px; ">Цена: 1000 руб.</p>
+                
+                <a href="t1.html" target="bottom_right_frame" style="color: black; font-size: 40px;">Подробнее</a>
+            </div>
+            <div class="карточка-товара" data-категория="accessories">
+                <img src="ac2.png" alt="Товар 1">
+                <h2 style="color: black; font-size: 40px; ">TRUE GAMERS Мужской свитшот хлопок с рисунком</h2>
+                <p style="color: black; font-size: 40px; ">Цена: 2200 руб.</p>
+                
+                <a href="t2.html" target="bottom_right_frame" style="color: black; font-size: 40px;">Подробнее</a>
+            </div>
+            <div class="карточка-товара" data-категория="accessories">
+                <img src="ac3.png" alt="Товар 1">
+                <h2 style="color: black; font-size: 40px; ">TRUE GAMERS Мужская толстовка 3D</h2>
+                <p style="color: black; font-size: 40px; ">Цена: 3000 руб.</p>
+                <a href="t3.html" target="bottom_right_frame" style="color: black; font-size: 40px;">Подробнее</a>
+            </div>
+                <div class="карточка-товара" data-категория="electronics">
+                    <img style="width: 500px;height: 500px;" src="pr1.png" alt="Товар 1">
+                        <h2 style="color: black; font-size: 40px; ">Игровая приставка X96 Max</h2>
+                        <p style="color: black; font-size: 40px; ">Цена: 5000 руб.</p>
+                        <a href="t4.html" target="bottom_right_frame" style="color: black; font-size: 40px;">Подробнее</a>
+                    </div>
+                    <div class="карточка-товара" data-категория="electronics">
+                        <img  style="width: 500px;height: 500px;" style="width: 500px;height: 500px;" src="pr2.png" alt="Товар 1">
+                        <h2 style="color: black; font-size: 40px; ">Игровая приставка XBOX</h2>
+                        <p style="color: black; font-size: 40px; ">Цена: 5000 руб.</p>
+                        <a href="t5.html" target="bottom_right_frame" style="color: black; font-size: 40px;">Подробнее</a>
+                    </div>
+                    <div class="карточка-товара" data-категория="electronics">
+                        <img style="width: 500px;height: 500px;" src="pr3.png" alt="Товар 1">
+                        <h2 style="color: black; font-size: 40px; ">Игровая приставка</h2>
+                        <p style="color: black; font-size: 40px; ">Цена: 3000 руб.</p>
+                        <a href="t6.html" target="bottom_right_frame" style="color: black; font-size: 40px;">Подробнее</a>
+                    </div>
+                    <div class="карточка-товара" data-категория="games">
+                        <img style="width: 500px;height: 500px;" src="game1.jpg" alt="Товар 1">
+                            <h2 style="color: black; font-size: 40px; ">Компьютерная игра COUNTER STRIKE 2</h2>
+                            <p style="color: black; font-size: 40px; ">Цена: 5000 руб.</p>
+                            <a href="t7.html" target="bottom_right_frame" style="color: black; font-size: 40px;">Подробнее</a>
+                        </div>
+                        <div class="карточка-товара" data-категория="games">
+                            <img style="width: 500px;height: 500px;" src="game2.jpg" alt="Товар 1">
+                            <h2 style="color: black; font-size: 40px; ">Компьютерная игра DOTA 2</h2>
+                            <p style="color: black; font-size: 40px; ">Цена: 2200 руб.</p>
+                            <a href="t8.html" target="bottom_right_frame" style="color: black; font-size: 40px;">Подробнее</a>
+                        </div>
+                        <div class="карточка-товара" data-категория="games">
+                            <img style="width: 500px;height: 500px;" src="game3.jpg" alt="Товар 1">
+                            <h2 style="color: black; font-size: 40px; ">Компьютерная игра танки</h2>
+                            <p style="color: black; font-size: 40px; ">Цена: 3000 руб.</p>
+                            <a href="t9.html" target="bottom_right_frame" style="color: black; font-size: 40px;">Подробнее</a>
+                        </div>
+                        <footer style="background-color: gray;">
+                            <center><img  src="5.png"></center> 
+                            <center><a href="7.html" target="bottom_right_frame" style="color: white; font-size: 30px; "> Обратная связь </a></center>
+                        </footer>
+                        
+</div>
+</body>
+</html>

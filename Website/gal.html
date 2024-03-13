@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+<head>
+  <title>Галерея</title>
+   <style>
+     body {
+      font-family: Verdana , sans-serif;
+    }
+       .container {
+      width: 100%; 
+      max-width: 50000px; /* Максимальная ширина контейнера */
+      margin: 0 auto; /* Центрирование контейнера */
+      padding: 0 20px; /* Внутренние отступы по бокам */
+    }
+      .header {
+         background-color: gray;
+          padding: 20px;
+      }
+      .header img {
+  width: 180px;
+  height: 50px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.footer {
+    background-color: gray;
+      position: absolute;
+      width: 2500px;
+  height: 200px;
+  position: absolute; 
+  bottom: -500px; 
+
+    }
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    .mySlides {
+      display: none;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+   </style>
+</head>
+<body>
+   <div class="container">
+   <div class="header">
+    <img src="logotin.png">
+    <a href="index.html" target="bottom_right_frame" style="color: white; font-size: 40px; margin-left: 300px;">Главная страница</a><a href="1.html" target="bottom_right_frame" style="color: white; font-size: 40px ;margin-left: 300px;"> Администратор</a><a href="2.html" target="bottom_right_frame" style="color: white; font-size: 40px ;margin-left: 890px;"> Регистрация</a><a href="3.html" target="bottom_right_frame" style="color: white; font-size: 40px; margin-left: 370px;">Войти</a>
+   </div>
+   <h2 style="font-size: 50px;"><center>Вы можете ознакомиться с нашими товарами</center></h2>
+   <center><p style="font-size: 20px;">Мы предоставляем качественную и современную линейку</p></center>
+   <center><p style="font-size: 20px;">Приобретая у нас товар, вы получаете гарантию и положительое настроение!</p></center>
+   <div class="slideshow-container">
+    <div class="mySlides">
+      <img src="ac1.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="ac2.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <img src="ac3.png" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="pr1.png" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="pr2.png" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="pr3.png" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="game1.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="game2.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="game3.jpg" style="width:100%">
+      </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+  
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+  
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex-1].style.display = "block";
+    }
+  </script>
+   <footer style="background-color:gray;color: black; font-size: 30px; ">
+
+    <div class="footer">
+        <center><img  src="5.png"></center> 
+        <center><a href="7.html" target="bottom_right_frame" style="color: white; font-size: 30px; "> Обратная связь </a></center>      
+      </div>
+  </footer>
+</div>
+</body>
+</html>

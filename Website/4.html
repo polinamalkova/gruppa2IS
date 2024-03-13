@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+<head>
+  <title>TRUE GAMERS</title>
+   <style>
+     body {
+      font-family: Verdana , sans-serif;
+    }
+              .container {
+      width: 100%; 
+      max-width: 50000px; /* Максимальная ширина контейнера */
+      margin: 0 auto; /* Центрирование контейнера */
+      padding: 0 20px; /* Внутренние отступы по бокам */
+    }
+      .header {
+         background-color: gray;
+          padding: 20px;
+      }
+      .header img {
+  width: 180px;
+  height: 50px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.slider {
+      display: flex;
+      overflow: hidden;
+    }
+    .slide {
+      width: 20%;
+      display: none;
+    }
+   </style>
+</head>
+<body>
+    <div class="co"></div>
+   <div class="header">
+    <img src="logotin.png">
+    <a href="index.html" target="bottom_right_frame" style="color: white; font-size: 40px; margin-left: 300px;">Главная страница</a><a href="1.html" target="bottom_right_frame" style="color: white; font-size: 40px ;margin-left: 300px;"> Администратор</a><a href="2.html" target="bottom_right_frame" style="color: white; font-size: 40px ;margin-left: 890px;"> Регистрация</a><a href="3.html" target="bottom_right_frame" style="color: white; font-size: 40px; margin-left: 370px;">Войти</a>
+   </div>
+   <h2 style="font-size: 50px;"><center>ПАРТНЁРЫ TRUE GAMERS</center></h2>
+   <center><p style="color: black; font-size: 40px;">Сильные партнеры по бизнесу позволят вамсущественно сэкономить на рекламе и закупке оборудования</p></center>
+   <img style=" margin-left: 300px; width: 200px;height: 200px;" src="2.png"><img style=" margin-left: 300px;width: 200px;height: 200px;" src="3.png"><img style=" margin-left: 300px;width: 200px;height: 200px;" src="4.png"><img style=" margin-left: 300px;width: 200px;height: 200px;" src="6.png">
+   <center><p style="color: black; font-size: 40px;">TRUE GAMERS - партнёрский бренд BORODACH, который специализируется на киберспорте. Создан для тех, кто привык побеждать с сильной командой. А что может объединить круче мерча? Высокое качество каждого продукта вызывает желание использовать его как можно чаще. </p></center>
+  <img src="7.jpeg">
+  <center><p style="color: black; font-size: 50px;">Присоединяйся к нам и стань стильным!</p></center>
+
+    <div class="slider">
+        <img src="ac1.png" alt="1" class="slide">
+        <img src="ac2.png" alt="2" class="slide">
+        <img src="game1.jpg" alt="3" class="slide">
+        <img src="pr1.png" alt="2" class="slide">
+        <img src="game2.jpg" alt="3" class="slide">
+      </div>
+      <script>
+        let slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("slide");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          slides[slideIndex-1].style.display = "block";
+          setTimeout(showSlides, 3000); // Изменение изображения каждые 2 секунды
+        }
+      </script>
+ <center><p style="color: black; font-size: 50px;">
+    Смелость замысла всегда измеряется
+    смелостью тех, кто решился претворить этот
+    замысел в жизнь.
+    Мы опросили тысячи игроков, чтобы поднять
+    киберспорт на ступень выше.
+    TRUE GAMERS - для тех, кто привык побеждать!</p></center>
+   <footer style="background-color:gray;color: black; font-size: 30px; ">
+
+    <div class="footer">
+        <center><img  src="5.png"></center> 
+        <center><a href="7.html" target="bottom_right_frame" style="color: white; font-size: 30px; "> Обратная связь </a></center>
+      </div>
+  </footer>
+</div>
+</body>
+</html>
