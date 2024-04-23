@@ -1,0 +1,62 @@
+body {
+    width: 1280px;
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    margin: 0 auto; 
+    align-items: center;
+  }
+  @font-face {
+    font-family: 'Jura';
+    src: url('./Jura-Light.eot');
+    src: local('Jura Light'), local('Jura-Light');
+    font-weight: 300;
+    font-style: normal;
+  }
+  .header{
+    background-color: black;
+    height: 100px;
+    width: 1200px;
+    
+  }
+  .img{
+    height: 100px;
+    width: 200px;
+  }
+  .text {
+    color: white;
+    margin-top: 30px; 
+    margin-left: 250px;
+    position: fixed;
+    text-decoration: none; /* Убираем подчеркивание текста */
+  }
+  .text2{
+    color: white;
+    margin-top: 30px; 
+    margin-left: 500px;
+    position: fixed;
+    text-decoration: none; /* Убираем подчеркивание текста */
+  }
+  .text3{
+    color: white;
+    position: fixed;
+    margin-top: -74px;
+    margin-left: 1000px;
+  }
+  .text4{
+    font-size: 30px;
+    align-items: center;
+    margin-left: 500px;
+  }
+.img1{
+    height: 200px;
+    width: 200px;
+}
+.container {
+    display: flex;
+    align-items: center;
+  }
+.text5{
+    font-size: 30px;
+   
+}
