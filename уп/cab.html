@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="shortcut icon" href="./img/logo.png">
+</head>
+<body>
+    <header>
+        <a href="index1.html">
+            <img src="./img/logo.png" alt="Логотип">
+        </a>
+        <div class="text">
+            <a href="catalog1.html">Каталог</a>
+            <a href="geo1.html">Где нас найти?</a>
+            <a href="cab.html">Личный кабинет</a>
+            <a href="index.html">Выход</a>
+        </div>
+    </header>
+    <br>
+    <form id="image-form" enctype="multipart/form-data">
+        <label for="image">Выберите изображение:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+        <button type="submit" class="submit-button">Загрузить</button>
+    </form>
+<br>
+    <div id="image-container"></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+    <p>Copy Start - магазин продажи</p>
+    <p>копировального оборудования</p>
+    <br>
+    <div class="par">
+    <div class="foo">
+    <p>г.Пермь, ул. Пушкина, дом 107а</p>
+    <p>+7 (342) 244-89-21</p>
+    <p>+7 (342) 236-28-03</p>
+</div>
+<div class="fo">
+    <p>Наши соц. сети</p>
+    <img src="./img/set.png" alt="Соц.сети">
+</div>
+</div>
+</footer>
+    <script>
+        document.getElementById('image-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var imageFile = document.getElementById('image').files[0];
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                var imageElement = document.createElement('img');
+                imageElement.src = e.target.result;
+
+                var imageContainer = document.getElementById('image-container');
+                imageContainer.innerHTML = '';
+                imageContainer.appendChild(imageElement);
+            };
+
+            reader.readAsDataURL(imageFile);
+        });
+    </script>
+</body>
+</html>
