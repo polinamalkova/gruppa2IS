@@ -37,7 +37,7 @@
         <a href="catalog1.php">Каталог</a>
     </div>
     <div class="tv">
-    <img src="./img/1.png" alt="товар">
+    <img src="./img/1.png" alt="товар" onclick="openModal(this)">
     <a href="tv11.php">Принтер струйный Canon Pixma G540 цветная печать, A4, цвет черный</a>
     <div class="tex1">
     <br>
@@ -51,13 +51,13 @@
 </div>
 <br>
 <div class="tv">
-    <img src="./img/2.png" alt="товар">
+    <img src="./img/2.png" alt="товар" onclick="openModal(this)">
     <a href="tv21.php">Принтер струйный Epson L8050 цветная печать, A4, цвет черный</a>
     <div class="tex2">
     <br>
     <p>20 199 руб</p>
     <div class="k">
-    <a href="korzina.php">
+    <a href="korzina2.php">
         <img src="./img/k.png" alt="Корзина">
     </a>
 </div>
@@ -65,13 +65,13 @@
 </div>
 <br>
 <div class="tv">
-    <img src="./img/3.png" alt="товар">
+    <img src="./img/3.png" alt="товар" onclick="openModal(this)">
     <a href="tv31.php">МФУ струйный Epson L3250 цветная печать, A4, цвет черный</a>
     <div class="tex3">
     <br>
     <p>5999 руб</p>
     <div class="kak">
-    <a href="korzina.php">
+    <a href="korzina3.php">
         <img src="./img/k.png" alt="Корзина">
     </a>
 </div>
@@ -83,7 +83,7 @@
 </a>
 <br>
 <div class="ab">
-<p>Наши парнеры</p>
+<p>Наши партнеры</p>
 </div>
 <div class="par">
 <img src="./img/sber.png" alt="Сбербанк">
@@ -107,7 +107,32 @@
 </div>
 </div>
 </footer>
+<div id="modal">
+    <div id="modal-content">
+        <span id="close-button" onclick="closeModal()">&times;</span>
+        <img id="modal-image" src="" alt="Картинка">
+    </div>
+</div>
 <script>
+var cartLinks = document.getElementsByClassName('cart');
+    for (var i = 0; i < cartLinks.length; i++) {
+        cartLinks[i].addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('Сначала войдите в систему');
+        });
+    }
+    function openModal(image) {
+            var modal = document.getElementById('modal');
+            var modalImage = document.getElementById('modal-image');
+
+            modal.style.display = 'flex';
+            modalImage.src = image.src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
     document.getElementById('content-form').addEventListener('submit', function(event) {
             event.preventDefault();
 

@@ -19,13 +19,6 @@
         <a href="index.php">Выход</a>
         </div>
     </header>
-    <form id="content-form" enctype="multipart/form-data">
-        <label for="image">Выберите картинку:</label>
-        <input type="file" id="image" name="image" accept="image/*"><br><br>
-        <textarea id="text" placeholder="Введите текст" name="text" required></textarea><br><br>
-        <input type="submit" value="Добавить" class="submit-button">
-    </form>
-    <div id="display-container"></div>
     <br>
     <p class="ab">Где нас найти?</p>
     <div class="text">
@@ -52,7 +45,8 @@
     </div>
 
     <div class="pol">
-        <form id="feedbackForm">
+    <p id="notification"></p>
+    <form id="feedbackForm">
             
             <input type="text" placeholder="Имя" id="name" required><br><br>
     
@@ -84,27 +78,18 @@
     </div>
     </footer>
     <script>
-        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
-             event.preventDefault();
- 
-             // Получение значений полей формы
-             var name = document.getElementById("name").value;
-             var email = document.getElementById("email").value;
-             var phone = document.getElementById("phone").value;
-             var message = document.getElementById("message").value;
- 
-             // Отправка данных на сервер или другую обработку
-             // В данном примере просто показываем уведомление
-             var notification = document.getElementById("notification");
-             notification.innerHTML = "Спасибо за отзыв, с вами свяжется менеджер";
-             notification.style.display = "block";
- 
-             // Очистка полей формы
-             document.getElementById("name").value = "";
-             document.getElementById("email").value = "";
-             document.getElementById("phone").value = "";
-             document.getElementById("message").value = "";
-         });
+           document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var notification = document.getElementById("notification");
+        notification.innerHTML = "Спасибо за отзыв, с вами свяжется менеджер";
+        notification.style.display = "block";
+
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("message").value = "";
+    });
      </script>
 </body>
 </html>

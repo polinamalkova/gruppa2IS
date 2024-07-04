@@ -41,7 +41,7 @@
     <p>уголка квартиры или офиса</p>
     <br>
     <p>Цена: 20 199 руб</p>
-    <a href="korzina.php" class="cart">
+    <a href="korzina2.php" class="cart">
         <img src="./img/k.png" alt="Корзина">
     </a>
     <br>

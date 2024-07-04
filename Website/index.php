@@ -77,7 +77,7 @@
 </a>
 <br>
 <div class="ab">
-<p>Наши парнеры</p>
+<p>Наши партнеры</p>
 </div>
 <div class="par">
 <img src="./img/sber.png" alt="Сбербанк">

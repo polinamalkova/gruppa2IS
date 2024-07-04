@@ -44,7 +44,7 @@
     <p>7.5стр/мин, цветная до 5.5стр/мин (7WN42B)</p>
     <br>
     <p>Цена: 6262 руб</p>
-    <a href="korzina.php">
+    <a href="korzina5.php">
         <img src="./img/k.png" alt="Корзина">
     </a>
     <br>

@@ -79,11 +79,10 @@ if ($result->num_rows > 0) {
         exit();
     } else {
         echo "Ошибка: Неверные данные";
+        exit();
     }
 } else {
     echo "Ошибка: Неверные данные";
+    exit();
 }
-
-$conn->close();
-
 ?>

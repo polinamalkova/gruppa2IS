@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copy Start - Где нас найти?</title>
+    <title>Заказ</title>
     <link rel="stylesheet" href="./style/style.css">
     <link rel="shortcut icon" href="./img/logo.png">
 </head>
@@ -19,27 +19,8 @@
         <a href="regi.php">Вход</a>
         </div>
     </header>
-    <br>
-    <p class="ab">Где нас найти?</p>
-    <div class="text">
-        <p>Мы находимся по адресу г. Пермь, ул. Пушкина, дом 107А</p>
-        <br>
-        <p>Наши контакты:</p>
-        <p>+7 (342) 244-89-21</p>
-        <p>+7 (342) 236-28-03</p>
-    </div>
-    <div id="map"></div>
-    <script>
-        function initMap() {
-          var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 55.751244, lng: 37.618423}, 
-            zoom: 10 
-          });
-        }
-      </script>
-      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac77671e13bc9db1b58fcbd1aeeb0879fdc62dfba5af72bc774fa87955848289d&amp;width=837&amp;height=596&amp;lang=ru_RU&amp;scroll=true"></script>
       <br>
-    <p class="ab">Обратная связь</p>
+    <p class="ab">Оформить заказ</p>
     <br>
     <div class="pol">
     <p id="notification"></p>
@@ -50,10 +31,8 @@
             <input type="email"  placeholder="Email"id="email" required><br><br>
     
             <input type="tel" placeholder="Номер телефона" id="phone" required><br><br>
-    
-            <textarea id="message" placeholder="Сообщение" rows="4" required></textarea><br><br>
 
-            <button type="submit" class="submit-button">Отправить</button>
+            <button type="submit" class="submit-button">Оформить</button>
             
         </form>
     </div>
@@ -74,12 +53,12 @@
     </div>
     </div>
     </footer>
-    <script>
+<script>
     document.getElementById("feedbackForm").addEventListener("submit", function(event) {
         event.preventDefault();
 
         var notification = document.getElementById("notification");
-        notification.innerHTML = "Спасибо за отзыв, с вами свяжется менеджер";
+        notification.innerHTML = "Спасибо за заказ, с вами свяжется менеджер";
         notification.style.display = "block";
 
         document.getElementById("name").value = "";

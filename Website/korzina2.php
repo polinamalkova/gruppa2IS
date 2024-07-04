@@ -21,12 +21,12 @@
     </header>
     <br>
     <p class="ab">Корзина</p>
-    <img src="./img/1.png" alt="товар">
-    <p>Принтер струйный Canon Pixma G540 цветная печать, A4, цвет черный</p>
-    <p id="goodbye">26 999 руб.</p>
+    <img src="./img/2.png" alt="товар">
+    <p>Принтер струйный Epson L8050 цветная печать, A4, цвет черный</p>
+    <p id="goodbye">20 199 руб.</p>
 <p>Изменить количество:</p>
 <input   type="number" id="количество" min="1" value="1" oninput="изменитьКоличество()">
-  <p id="общаяСтоимость">Общая стоимость: 26 999 руб</p>
+  <p id="общаяСтоимость">Общая стоимость: 20 199 руб</p>
   <b><a href="zakaz.php" style="color: black; text-decoration: none;">Оформить заказ</a></b>
    <br>
    <a href="pust.php" style="color: red; text-decoration: none;">Удалить</a>
@@ -50,7 +50,7 @@
 <script>
     function изменитьКоличество() {
       let количество = document.getElementById('количество').value;
-      let стоимость = 26999; 
+      let стоимость = 20199; 
       document.getElementById('общаяСтоимость').innerText = 'Общая стоимость: ' + (количество * стоимость) + ' руб.';
     }
 </script>
