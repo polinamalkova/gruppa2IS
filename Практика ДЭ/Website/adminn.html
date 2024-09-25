@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../logo/logo.png">
+    <style>
+        button {
+            background-color: #515969; /* Set button color */
+            color: white; /* Set text color for better contrast */
+            border: none; /* Remove default border */
+            padding: 10px 20px; /* Add some padding */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            display: block; /* Make the button a block element */
+            margin: 0 auto; /* Center the button */
+        }
+
+        .pol {
+            text-align: center; /* Center align the content in the div */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="../logo/logo.png" class="q" alt="Логотип">
+        </a>
+        <p class="text">Сделаем лучше вместе!</p>
+    </header>
+    <div class="pol">
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <input type="text" id="login" name="login" placeholder="Логин" required><br><br>
+            <input type="password" id="password" name="password" placeholder="Пароль" required><br><br>
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const login = document.getElementById('login').value;
+            const password = document.getElementById('password').value;
+
+            if (login === 'admin' && password === '1234') {
+                window.location.href = 'admin.html';
+                return false; // Prevent form submission
+            } else {
+                alert('Неверный логин или пароль');
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>

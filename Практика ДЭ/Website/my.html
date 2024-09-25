@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Данные заявок</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../logo/logo.png">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        img {
+            width: 100px;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="w">
+        <a href="index.html">
+            <img src="../logo/logo.png" class="q" alt="Логотип">
+        </a>
+    </div>
+        <p class="text">Сделаем лучше вместе!</p>
+        <a href="cab.html" class="text12">Личный кабинет</a>
+        <a href="index.html" class="text1">Выход</a>
+    </header>
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>Фото</th>
+                <th>Время</th>
+                <th>Название</th>
+                <th>Категория</th>
+                <th>Статус</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody id="dataBody">
+            <!-- Данные будут добавлены здесь -->
+        </tbody>
+    </table>
+    <br>
+    <a href="nomy.html" class="text5">Написать заявку</a>
+
+    <script>
+        // Получаем данные из localStorage
+        const formData = JSON.parse(localStorage.getItem('formData')) || [];
+        const dataBody = document.getElementById('dataBody');
+
+        // Заполняем таблицу данными
+        formData.forEach((item, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td><img src="${item.photo}" alt="Фото"></td>
+                <td>${new Date().toLocaleTimeString()}</td>
+                <td>${item.name}</td>
+                <td>${item.category}</td>
+                <td>${item.status || 'Активен'}</td>
+                <td><button onclick="deleteRow(${index})">Удалить</button></td>
+            `;
+            dataBody.appendChild(row);
+        });
+
+        function deleteRow(index) {
+            // Подтверждение удаления
+            if (confirm("Вы уверены, что хотите удалить эту строку?")) {
+                // Удаляем элемент из массива
+                formData.splice(index, 1);
+                // Обновляем localStorage
+                localStorage.setItem('formData', JSON.stringify(formData));
+                // Перезагружаем страницу для обновления таблицы
+                location.reload();
+            }
+        }
+    </script>
+</body>
+</html>

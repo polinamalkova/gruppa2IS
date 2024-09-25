@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сделаем лучше вместе!</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../logo/logo.png">
+    <style>
+        .b1 {
+            position: relative;
+            display: inline-block;
+        }
+        .b1 img {
+            display: block;
+        }
+        .b1 .hover-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .b1:hover .hover-image {
+            display: block;
+        }
+        .b1:hover .main-image {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="../logo/logo.png" class="q" alt="Логотип">
+        </a>
+        <p class="text">Сделаем лучше вместе!</p>
+        <a href="adminn.html" class="text11">Администратор</a>
+        <a href="regi.html" class="text1">Вход</a>
+    </header>
+    <p id="counter" class="text2"></p>
+    <div class="b">
+        <div class="b1">
+            <img src="../content/1.jpg" alt="Описание картинки" class="main-image text3">
+            <img src="../content/12-hover.jpg" alt="Описание картинки при наведении" class="hover-image text3">
+            <p>18.09.2024</p>
+            <p>Яма</p>
+        </div>
+        <div class="b1">
+            <img src="../content/2.jpg" alt="Описание картинки" class="main-image text3">
+            <img src="../content/22-hover.jpg" alt="Описание картинки при наведении" class="hover-image text3">
+            <p>19.09.2024</p>
+            <p>Мусор</p>
+        </div>
+        <div class="b1">
+            <img src="../content/3.jpg" alt="Описание картинки" class="main-image text3">
+            <img src="../content/32-hover.jpg" alt="Описание картинки при наведении" class="hover-image text3">
+            <p>20.09.2024</p>
+            <p>Детская площадка</p>
+        </div>
+        <div class="b1">
+            <img src="../content/4.jpg" alt="Описание картинки" class="main-image text3">
+            <img src="../content/42-hover.jpg" alt="Описание картинки при наведении" class="hover-image text3">
+            <p>20.09.2024</p>
+            <p>Здание</p>
+        </div>
+    </div>
+    <p class="text4">Есть вопросы? Есть проблемы? </p>
+    <a href="regi.html" class="text5">Напиши нам и мы поможем</a>
+    <script>
+        let solvedTasks = 4; 
+
+        function updateCounter() {
+            const counterElement = document.getElementById('counter');
+            counterElement.innerText = `Количество решенных заявок - ${solvedTasks}`;
+            solvedTasks++; 
+        }
+        
+        setInterval(updateCounter, 3000);
+        
+        window.onload = updateCounter;
+    </script>
+</body>
+</html>
