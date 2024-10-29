@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./Content/logo.png">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./Content/logo.png" class="q" alt="Логотип">
+        </a>
+    </header>
+    <p onlick="window.location.href=' ./rec.php" class="text4">Регистрация</p>
+    <div class="pol">
+    <form id="loginForm" action="rec.php" method="post">
+        <input type="text" id="name" name="name" placeholder="Имя" require><br><br>
+
+        <input type="text" id="famlia" name="famlia" placeholder="Фамилия" require><br><br>
+
+        <input type="text" id="patronymic" name="patronymic" placeholder="Отчество" require><br><br>
+
+        <input type="text" id="phone" name="phone" placeholder="Номер телефона" require><br><br>
+
+        <input type="text" id="email" name="email" placeholder="Почта" require><br><br>
+
+        <input type="text" id="login" name="login" placeholder="Логин" require><br><br>
+
+        <input type="text" id="password" name="password" placeholder="Пароль" require><br><br>
+        
+        <br>
+        <label class="consent-label">
+            <input type="checkbox" name="consent" required>
+            Согласие на обработку персональных данных
+        </label>
+        <br>
+        <button type="submit" onlick="window.location.href=' ./my.php'" style="background-color: #186D08; font-size: 20px; color: white; margin-left: 50px">Зарегистрироваться</button>
+        <br>
+        <br>
+        <a href="av.html" class="text6">Уже есть аккаунт?</a>
+</form>
+</div>
+    </body>
+    </html>
