@@ -15,22 +15,22 @@
         <p class="text">Сделаем лучше вместе!</p>
 
     </header>
-    <p onlick="window.location.href=' ./rec.php" class="text4">Регистрация</p>
+    <p class="text4">Регистрация</p>
     <div class="pol">
-    <form id="loginForm" action="rec.php" method="post">
+    <form id="loginForm" action="./php/reg.php" method="post">
         <input type="text" id="name" name="name" placeholder="Имя" require><br><br>
 
         <input type="text" id="famlia" name="famlia" placeholder="Фамилия" require><br><br>
 
-        <input type="text" id="patronymic" name="patronymic" placeholder="Отчество" require><br><br>
-
-        <input type="text" id="login" name="login" placeholder="Логин" require><br><br>
+        <input type="text" id="otchestvo" name="otchestvo" placeholder="Отчество" require><br><br>
 
         <input type="text" id="email" name="email" placeholder="Почта" require><br><br>
 
+        <input type="text" id="login" name="login" placeholder="Логин" require><br><br>       
+
         <input type="text" id="password" name="password" placeholder="Пароль" require><br><br>
 
-        <input type="text" id="repeat password" name="repeat password" placeholder="Повтор пароля" require><br><br>
+        <input type="text" id="confirm_password" name="confirm_password" placeholder="Повтор пароля" require><br><br>
         
         <br>
         <button type="submit" onlick="window.location.href=' ./cab.php'" style="background-color: #515969; font-size: 20px; color: white; margin-left: 50px">Зарегистрироваться</button>
